@@ -1,3 +1,4 @@
+//^  INTERFACES IN TYPESCRIPT
 const register = (username: { name: string }) => {
     if (username.name == "amin") {
         return true
@@ -53,3 +54,69 @@ const Shoe: Product = {
 }
 
 console.log(Shoe)
+
+// A VARIABLE WITH THE TYPE OF AN INTERFACE MUST : 
+// 1 - BE AN OBJECT 
+// 2 - HAVE THE INTERFACE PROPERTIES
+// 3 - THE PROPERTIES MUST HAVE CORRECT TYPES DUE TO INTERFACE PROP TYPES
+// 4 - DOESNT HAVE EXTRA PROPERTIES
+
+// HINT : INTERFACE CAN ALSO HAVE METHODS AS A PROPERTY
+interface Course {
+    id: number,
+    title: string,
+    sessionsCount: number
+    isCompleted: boolean
+    teacher: string
+    buy(): boolean // A METHOD !
+}
+
+const jsCourse: Course = {
+    id: 1,
+    title: "js course",
+    sessionsCount: 200,
+    isCompleted: true,
+    teacher: 'mr.ahmadi',
+    buy: () => { return true }
+}
+console.log(jsCourse)
+
+//^ OPTIONAL PROPERTIES IN AN INTERFACE ===> ?
+
+interface Employee {
+    name: string
+    age?: number // THIS IS AN OPTIONAL PROPERTIES  , WE CAN SPECIFY IT IN A VARIABLE , OR WE CAN DONT SPECIFY IT
+}
+const mrReza: Employee = {
+    name: 'REZA MOHAMMADI'
+}
+// WE HAVENT SPECIFY THE AGE BUT WE DONT HAVE AN ERROR
+
+// WE CAN MODIFY AN INTERFACE LATER IN OUR CODE TOO
+
+interface Employee {
+    email?: string
+}
+// NOW THE PROPERTY EMAIL(OPTIONAL) IS ADDED TO THE EMPLOYEE INTERFACE
+
+
+// ^ EXTENDS
+// OUR INTERFACE CAN EXTEND FROM ANOTHER INTERFACE TOO
+interface Teacher extends Employee {
+    score: number
+    phone: number
+}
+// NOW THE INTERFACE ( TEACHER ) HAS ALL THE PROPERTIES OF EMPLOYEE , PLUS THE PROPRETIES ( SCORE ) AND ( PHONE )
+
+const rezaImani: Teacher = {
+    name: 'REZA IMANI',
+    score: 50,
+    phone: 93523254533,
+    email: 'REZAIMANI@GMAIL.COM',
+}
+
+console.log(rezaImani)
+
+
+
+
