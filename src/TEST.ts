@@ -130,7 +130,7 @@ class Student extends Person {
 const mamadStudent = new Student("mamad", "mamad@gmail.com", 25, [])
 console.log(mamadStudent)
 
-//^ ACCESS MODIFIERS IN TS 
+//^ ACCESS MODIFIERS IN TS
 // PUBLIC , PRIVATE , PROTECTED , READ-ONLY , STATIC
 
 

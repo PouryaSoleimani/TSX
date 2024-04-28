@@ -1,3 +1,5 @@
+let root = document.querySelector(`#root`) as HTMLDivElement
+root.style.backgroundColor = '#0000'
 //^ INTERSECTIONS IN TS
 type Admin = {
     name: string,
@@ -43,3 +45,19 @@ showProp(rezaDolati)
 
 //! OR WE CAN USE (( TYPEOF )) INSTEAD OF (( TYPE IN ))
 
+//^ INDEX TYPES IN TS
+interface Product2 {
+    [prop: string]: string
+}
+// IN THE INTERFACE (( PRODUCT2 )) WE HAVE USED INDEX TYPING , AS WE SAID : THE INTERFACE CAN HAVE INFINITE PROPS AS STRING , WITH THE VALUES OF STRING TYPE
+// SO WE ARE NOT LIMITED TO A SPECIFIC NUMBER OF PROPERTIES IN VARIABLES WITH THE TYPE OF PRODUCT2
+const jacket: Product2 = {
+    id: '1',
+    title: 'WINTER JACKET',
+    brand: 'ADIDAS',
+    size: 'MEDIUM',
+    season: 'FALL/WINTER',
+    gender: 'MEN',
+    price: '200',
+}
+console.log(jacket)
