@@ -82,7 +82,6 @@ const jsCourse: Course = {
 console.log(jsCourse)
 
 //^ OPTIONAL PROPERTIES IN AN INTERFACE ===> ?
-
 interface Employee {
     name: string
     age?: number // THIS IS AN OPTIONAL PROPERTIES  , WE CAN SPECIFY IT IN A VARIABLE , OR WE CAN DONT SPECIFY IT
@@ -140,3 +139,23 @@ const peogeout207: Peogeut = {
     transmition: 'automatic'
 }
 console.log(peogeout207)
+
+// {{ CLASSES }} CAN ALSO EXTEND FROM AN INTERFACE  , IN THIS CASE  , WE USE THE KEYWORD (( IMPLEMENTS ))
+
+class Pars implements Peogeut {
+    constructor(
+        public make: string,
+        public model: string,
+        public year: number,
+        public run: () => void,
+        public color: string,
+        public transmition: "manual" | "automatic"
+    ) {
+        this.make = make,
+            this.model = model,
+            this.year = year,
+            this.run = run,
+            this.color = color,
+            this.transmition = transmition
+    }
+}
