@@ -140,7 +140,7 @@ const peogeout207: Peogeut = {
 }
 console.log(peogeout207)
 
-// {{ CLASSES }} CAN ALSO EXTEND FROM AN INTERFACE  , IN THIS CASE  , WE USE THE KEYWORD (( IMPLEMENTS ))
+// CLASSES CAN ALSO EXTEND FROM AN INTERFACE  , IN THIS CASE  , WE USE THE KEYWORD (( IMPLEMENTS ))
 
 class Pars implements Peogeut {
     constructor(
