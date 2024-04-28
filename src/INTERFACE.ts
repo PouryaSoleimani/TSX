@@ -118,5 +118,25 @@ const rezaImani: Teacher = {
 console.log(rezaImani)
 
 
+// ^ ANOTHER EXAMPLE OF EXTENDING IN INTERFACES
+interface Car {
+    make: string,
+    model: string,
+    year: number,
+    run: (speed: string) => void
+}
 
+interface Peogeut extends Car {
+    color: string,
+    transmition: "manual" | "automatic"
+}
 
+const peogeout207: Peogeut = {
+    make: 'IKCO',
+    model: "207",
+    year: 1401,
+    run: (speed) => { console.log(speed) },
+    color: 'black',
+    transmition: 'automatic'
+}
+console.log(peogeout207)
