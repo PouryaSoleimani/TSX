@@ -157,5 +157,6 @@ class Pars implements Peogeut {
             this.run = run,
             this.color = color,
             this.transmition = transmition
+            
     }
 }
