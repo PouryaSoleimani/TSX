@@ -23,8 +23,16 @@ const echoNum = echo(12345)
 console.log(echoNum)
 
 //^ ADVANCED
-function merge(obj1: object, obj2: object): object {
-    return Object.assign(obj1, obj2)
+function merge<T, U>(obj1: T, obj2: U): T & U { // Here we have two types for each parameter and the output is the combine of our 2 types
+    return { ...obj1, ...obj2 }
 }
 
-console.log(merge({ id: 1 }, { name: 'poria' }))
+const mergedObjects = merge({ id: 1 }, { name: 'poria' })
+console.log(mergedObjects)
+
+function merge2<X, Y>(param1: X, param2: Y): X & Y {
+    return { ...param1, ...param2 }
+}
+
+const mergedObj2 = merge({ name: 'ali' }, { family: 'rezayi' })
+console.log(mergedObj2)
