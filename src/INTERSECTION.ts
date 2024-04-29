@@ -60,4 +60,4 @@ const jacket: Product2 = {
     gender: 'MEN',
     price: '200',
 }
-console.log(jacket)
+console.log(jacket) 
