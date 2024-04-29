@@ -1,6 +1,7 @@
 let root = document.querySelector(`#root`) as HTMLDivElement
 root.style.backgroundColor = '#0000'
 //^ INTERSECTIONS IN TS
+
 type Admin = {
     name: string,
     privilages: string[]
