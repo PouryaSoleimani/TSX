@@ -2,8 +2,8 @@
 
 // Declaring a type for the component props
 export type TodoListProps = { id: number, title: string, isCompleted: boolean }
-type TodosType = TodoListProps[]
 
+// TSX STYLINGS
 const styles: React.CSSProperties = {
     backgroundColor: '#cacaca',
     padding: '6px',
@@ -13,17 +13,27 @@ const styles: React.CSSProperties = {
     borderRadius: "10px",
     border: "10px solid black",
     fontSize: '28px',
-    fontWeight: "800"
+    fontWeight: "800",
+    margin: '0px 10px',
+    display: "flex",
+    flexDirection: "column",
+    gap: "15px"
 }
 
-
+const clickHandler = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    event.preventDefault()
+    console.log(`CLICK CLICK`)
+}
 
 const TodoList = ({ ...Todos }) => {
     console.log(Todos.Todos)
     return (
         <div style={styles}>
             {Todos.Todos.map((todo: TodoListProps) => (
-                <h2 key={todo.id}>{todo.id}-{todo.title} -{todo.isCompleted ? '✅' : '❌'}</h2>
+                <div className="flex space-x-10">
+                    <h2 key={todo.id}>{todo.id}-{todo.title} -{todo.isCompleted ? '✅' : '❌'}</h2>
+                    <button className="bg-sky-800 text-white px-1 py-0 text-sm" onClick={clickHandler}>DONE</button>
+                </div>
             ))}
         </div>
     )
