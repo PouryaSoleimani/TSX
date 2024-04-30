@@ -52,3 +52,7 @@ const [phone , setPhone] = useState<number>(9364342521)
 
 <!--^ 7 - USEREF :  -->
 
+const elem = useRef<HTMLInputElement>(null)
+useeffect(()=>{
+    elem.current?.value
+},[])

@@ -1,5 +1,7 @@
 // ^ TODOLIST COMPONENT
 
+import { useEffect, useRef } from "react"
+
 // Declaring a type for the component props
 export type TodoListProps = { id: number, title: string, isCompleted: boolean }
 
@@ -27,12 +29,21 @@ const clickHandler = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) =>
 
 const TodoList = ({ ...Todos }) => {
     console.log(Todos.Todos)
+    const elem = useRef<HTMLButtonElement>(null)
+    useEffect(() => {
+        console.log(elem.current?.textContent)
+
+    }, [])
+
+
+
+
     return (
         <div style={styles}>
             {Todos.Todos.map((todo: TodoListProps) => (
                 <div className="flex space-x-10">
                     <h2 key={todo.id}>{todo.id}-{todo.title} -{todo.isCompleted ? '✅' : '❌'}</h2>
-                    <button className="bg-sky-800 text-white px-1 py-0 text-sm" onClick={clickHandler}>DONE</button>
+                    <button className="bg-sky-800 text-white px-1 py-0 text-sm" onClick={clickHandler} ref={elem}>DONE</button>
                 </div>
             ))}
         </div>
