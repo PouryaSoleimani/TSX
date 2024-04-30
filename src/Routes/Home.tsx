@@ -1,5 +1,5 @@
-import TodoList from "./TodoList"
 import { TodoListProps } from "./TodoList"
+import TodoList from './../TodoList/TodoList';
 
 //^ HOME.TSX =============================================================================================================
 const Home = (): React.ReactNode => {
@@ -15,7 +15,8 @@ const Home = (): React.ReactNode => {
     //RETURN ==============================================================================================================
     return (
         <>
-            <TodoList Todos={Todos} />
+            {/* <TodoList Todos={Todos} /> */}
+            <TodoList />
         </>
     )
 }
