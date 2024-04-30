@@ -29,7 +29,7 @@ const TodoList = () => {
         const filteredTodos = copy.filter(item => item.id !== ID)
         setTodos(filteredTodos)
     }
-
+    
     // RETURN ================================================================================================================
     return (
         <>
@@ -46,7 +46,6 @@ const TodoList = () => {
                     </form>
                     <ul className='bg-black/30 px-8 py-6 flex h-fit mb-2 flex-col text-white font-extrabold mt-2 w-[83%] mx-auto rounded-lg space-y-2'>
                         {!todos.length ? (<h2 className='text-2xl'>No Tasks Yet ...</h2>) : (
-
                             todos.map((todo: TodoType) => (
                                 <div key={todo.id} className='flex items-center justify-between bg-black/80 pl-2 border-4 border-pink-500 rounded-lg'>
                                     <li className='list-decimal list-inside overflow-auto text-[22px]'>{todo.title}</li>
@@ -55,11 +54,10 @@ const TodoList = () => {
                                     </button>
                                 </div>
                             ))
-
                         )}
                     </ul>
                 </div>
-                
+
             </div >
         </>
     )
