@@ -34,3 +34,21 @@ const clickHandler = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) =>
 }
 <button className="bg-sky-800 text-white px-1 py-0 text-sm" onClick={clickHandler}>DONE</button>
 
+<!--^ 6 - USESTATE :  -->
+
+const [data , setData ] = useState([])
+- Here we haven't assign a type for the data state , but TS will guess it and set its type as an Array , because the default value is an empty array
+
+const [isLoading , setIsLoading] = useState(false)
+- Here the isLoading state's Type is boolean , because the default value is false
+
+BUT , If we want to assign the type , we must use generics : 
+
+const [isAvailabe , setIsAvailable] = useState<boolean>(false)
+const [text , setText] = useState<string>('HELLO WORLD')
+const [phone , setPhone] = useState<number>(9364342521)
+
+<!-- ! NOTE : USING DIFFERENT TYPE DATAS FOR THE STATES ABOVE WILL RETURN AN ERROR -->
+
+<!--^ 7 - USEREF :  -->
+
