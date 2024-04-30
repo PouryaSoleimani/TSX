@@ -134,3 +134,4 @@ console.log(mamadStudent)
 // PUBLIC , PRIVATE , PROTECTED , READ-ONLY , STATIC
 
 
+ 

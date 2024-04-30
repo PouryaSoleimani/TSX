@@ -26,13 +26,32 @@ console.log(echoNum)
 function merge<T, U>(obj1: T, obj2: U): T & U { // Here we have two types for each parameter and the output is the combine of our 2 types
     return { ...obj1, ...obj2 }
 }
-
 const mergedObjects = merge({ id: 1 }, { name: 'poria' })
 console.log(mergedObjects)
 
+// With using generics we can have autocompletes when we are developing
 function merge2<X, Y>(param1: X, param2: Y): X & Y {
     return { ...param1, ...param2 }
 }
 
 const mergedObj2 = merge({ name: 'ali' }, { family: 'rezayi' })
 console.log(mergedObj2)
+
+//^ EXTENDING IN GENERICS
+
+function merge3<A extends object, B extends object>(param3: A, param4: B): A & B {
+    return { ...param3, ...param4 }
+}
+// Here have extend and inherited the type from object type , so any other type except object can not be setted to out params type
+
+//! GENERIC EXERCISE
+function describe(param: string) {
+    let text = 'zero items'
+    if (param.length) {
+        text = `${param.length} items are in your text`
+    }
+    return text
+}
+let result = describe('HELLO WORLD')
+console.log(result)
+
