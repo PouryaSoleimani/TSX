@@ -16,3 +16,10 @@ const TodoList = (props : TodoListProps)=>{
 
 <!-- WE SHOULD ALWAYS DECLARE A TYPE FOR FUNCTIONAL COMPONENTS PROPS , WE USUALLY NAME THE TYPE AS THE FC.NAME + PROPS == type TodoListProps ={} -->
 <!-- WE CAN ALSO EXPORT TYPES AND USE IT IN OTHER COMPONENTS -->
+
+
+4 - REACT TYPES : 
+
+- React.CssProperties ==> we can assign this type for a variable when we want to write css styles in variable
+
+-

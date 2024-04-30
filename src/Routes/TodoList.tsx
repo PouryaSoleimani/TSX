@@ -1,13 +1,25 @@
 // ^ TODOLIST COMPONENT
 
 // Declaring a type for the component props
-type TodoListProps = { id: number, title: string, isCompleted: boolean }
+export type TodoListProps = { id: number, title: string, isCompleted: boolean }
 
-const TodoList = (props: TodoListProps) => {
+
+const TodoList = ({ id, title, isCompleted }: TodoListProps) => {
+    const styles: React.CSSProperties = {
+        backgroundColor: '#cacaca',
+        padding: '5px',
+        width: '430px',
+        color: 'black',
+        fontFamily: "sans-serif",
+        borderRadius: "10px",
+        border: "10px solid black",
+        fontSize: '38px',
+        fontWeight: "800"
+    }
 
     return (
-        <div>
-            {props.id} = {props.title} - {props.isCompleted}
+        <div style={styles}>
+            {id} - {title} - {isCompleted ? '✅' : '❌'}
         </div>
     )
 }
