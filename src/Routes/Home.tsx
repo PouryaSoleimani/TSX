@@ -37,12 +37,20 @@ const Home = (): React.ReactNode => {
     console.log(login('pourya', 12345))
 
 
-    let TodoListItem: TodoListProps = { id: 1, title: 'GO TO GYM', isCompleted: false }
+    // let TodoListItem: TodoListProps = { id: 1, title: 'GO TO GYM', isCompleted: false }
 
+    let Todos = [
+        { id: 2, title: 'LEARN TS', isCompleted: false },
+        { id: 3, title: 'LEARN LIBRARIES', isCompleted: false },
+        { id: 4, title: 'LEARN REACT', isCompleted: true },
+        { id: 5, title: 'LEARN NEXT', isCompleted: true },
+        { id: 6, title: 'LEARN REDUX', isCompleted: false },
+        { id: 7, title: 'LEARN SWR', isCompleted: false },
+    ]
     //RETURN ==============================================================================================================
     return (
         <>
-            <div>
+            {/* <div>
                 <h1 className="text-red-700 h-full font-extrabold text-5xl p-2">  {number} -{isValid} - {name}</h1>
                 <h2 className="border-4 border-black rounded-lg p-3 bg-zinc-300 font-extrabold text-3xl w-fit tracking-tighter">
                     {myObject.firstName} - {myObject.lastName} - {myObject.age} - {myObject.details[0]} - {myObject.details[1]} - {myObject.details[2]}
@@ -56,8 +64,8 @@ const Home = (): React.ReactNode => {
                 <h2 className="bg-yellow-400 border-8 border-black flex text-4xl font-bold space-x-10 p-2 text-black w-fit ml-2 mt-2">
                     {mySkillsTuple.map(item => <p className="hover:bg-zinc-800">{item}</p>)}
                 </h2>
-            </div>
-            <TodoList {...TodoListItem} />
+            </div> */}
+            <TodoList Todos={Todos} />
         </>
     )
 }
