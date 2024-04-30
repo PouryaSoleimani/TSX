@@ -7,7 +7,7 @@ const TodoList = (props: TodoListProps) => {
 
     return (
         <div>
-            {props.id} - {props.title} - {props.isCompleted}
+            {props.id} = {props.title} - {props.isCompleted}
         </div>
     )
 }
