@@ -4,8 +4,6 @@ import React, { useRef, useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
 import 'animate.css';
 
-
-
 type TodoType = { id: number, title: string, isCompleted: boolean }
 
 const TodoList = () => {
@@ -29,7 +27,7 @@ const TodoList = () => {
         const filteredTodos = copy.filter(item => item.id !== ID)
         setTodos(filteredTodos)
     }
-    
+
     // RETURN ================================================================================================================
     return (
         <>
@@ -37,7 +35,7 @@ const TodoList = () => {
                 <h1 className='bg-zinc-900 absolute top-0  text-purple-600 font-extrabold w-full text-4xl text-center z-30 py-4 border-b-8 border-[#CCFF00]'>TODO LIST WITH REACT + TYPESCRIPT</h1>
                 <img src="/public/VRIBANT-NATURE-LANDSCAPE-2102023.png" className='w-screen h-full absolute top-0 left-0' />
 
-                {/* //^ TODOLIST CONTAINER */}
+                {/*TODOLIST CONTAINER */}
                 <div id="todoContainer" className='animate__animated animate__bounce animate__faster flex flex-col backdrop-blur-3xl max-h-screen overflow-auto mt-28 z-50 w-[40rem] pb-10 border border-[#fafafa] rounded-2xl'>
                     <h2 className='bg-black text-cyan-300 text-center p-3 text-3xl font-extrabold'>TODO LIST</h2>
                     <form className='mx-auto space-x-3' onSubmit={addTodo}>

@@ -23,7 +23,7 @@ let Any: any = 2
 // Any.name = 10
 // Unknown++ --> THIS RETURNS AN ERROR .. ANY HAS NO TYPECHECKING BUT UNKNOWN HAS TS TYPE CHECKING
 
-// ^ TYPE CASTING
+//^ TYPE CASTING
 let test: unknown = 1
 let stringTest = test as string // --> HERE WE HAVE CHANGED THE TYPE OF (STRINGTEST) FROM UNKNOWN TO STRING (MEHTOD 1)(MORE POPULAR)
 let stringTest2 = <string>test // --> HERE WE HAVE CHANGED THE TYPE OF (STRINGTEST) FROM UNKNOWN TO STRING TOO. (METHOD 2)
@@ -134,4 +134,3 @@ console.log(mamadStudent)
 // PUBLIC , PRIVATE , PROTECTED , READ-ONLY , STATIC
 
 
- 
