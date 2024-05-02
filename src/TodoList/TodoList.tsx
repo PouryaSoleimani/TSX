@@ -14,7 +14,7 @@ const TodoList = () => {
     //FUNCTIONS
     const addTodo = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
-        let inputTitle = inputRef.current?.value
+        const inputTitle = inputRef.current?.value
         const NewTodo = { id: uuidv4(), title: inputTitle, isCompleted: false }
         const copy = todos.slice(0)
         copy.push(Object.assign(NewTodo))

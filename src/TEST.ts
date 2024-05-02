@@ -82,7 +82,7 @@ function sum3(result: number) { console.log(result) }
 sum2(10, 20, sum3)
 
 
-//^ ALIAS TYPE 
+//*ALIAS TYPE 
 const item1: number | string = 10
 const item2: number | string = 20
 const item3: number | string = 30
