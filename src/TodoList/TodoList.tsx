@@ -28,7 +28,7 @@ const TodoList = () => {
         setTodos(filteredTodos)
     }
 
-    // RETURN ================================================================================================================
+    // RETURN 
     return (
         <>
             <div className='flex flex-col justify-start  items-center h-screen'>
